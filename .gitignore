@@ -1,0 +1,53 @@
+# Azure Developer CLI
+.azure/
+.env.local
+
+# Azure Resource Manager
+*.parameters.json
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vs/
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Build outputs
+bin/
+obj/
+out/
+
+# Dependencies
+node_modules/
+packages/
+
+# Secrets and local config
+appsettings.local.json
+appsettings.Development.json
+local.settings.json
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Azure Functions
+__blobstorage__
+__queuestorage__
+__azurite_db*__.json
+
+# Bicep outputs
+main.json
