@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: cloudengws-landingzone
+metadata:
+  template: cloudengws-landingzone@0.0.1-beta
+
+# Omit services if you don't have any applications to deploy
+services: {}
+
+infra:
+  provider: bicep
+  path: infra
+
+hooks:
+  postprovision:
+    windows:
+      shell: pwsh
+      run: |
+        Write-Host "Landing zone provisioned successfully"
+        Write-Host "Resource Groups created:"
+        Write-Host "- $env:AZURE_RESOURCE_GROUP_SECURITY"
+        Write-Host "- $env:AZURE_RESOURCE_GROUP_MONITORING" 
+        Write-Host "- $env:AZURE_RESOURCE_GROUP_APP1"
+        Write-Host "- $env:AZURE_RESOURCE_GROUP_APP2"
+        Write-Host "- $env:AZURE_RESOURCE_GROUP_DATABASE"
+        Write-Host "- $env:AZURE_RESOURCE_GROUP_SHARED"

@@ -1,0 +1,19 @@
+{
+  "resourceGroup": "rg",
+  "storageAccount": "st", 
+  "keyVault": "kv",
+  "logAnalyticsWorkspace": "log",
+  "applicationInsights": "appi",
+  "virtualNetwork": "vnet",
+  "subnet": "snet",
+  "networkSecurityGroup": "nsg",
+  "appServicePlan": "asp",
+  "appService": "app",
+  "functionApp": "func", 
+  "cosmosDBAccount": "cosmos",
+  "sqlServer": "sql",
+  "sqlDatabase": "sqldb",
+  "containerRegistry": "acr",
+  "managedIdentity": "id",
+  "roleAssignment": "ra"
+}
